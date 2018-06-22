@@ -1,0 +1,32 @@
+{
+  "name": "apostrophe-nightwatch-tools",
+  "version": "2.0.0",
+  "description": "Nightwatch custom commands useful for testing ApostropheCMS sites.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apostrophecms/apostrophe-nightwatch-tools.git"
+  },
+  "keywords": [
+    "nightwatch",
+    "apostrophecms",
+    "apostrophe-cms",
+    "apostrophe"
+  ],
+  "author": "P'unk Avenue LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apostrophecms/apostrophe-nightwatch-tools/issues"
+  },
+  "homepage": "https://github.com/apostrophecms/apostrophe-nightwatch-tools#readme",
+  "dependencies": {
+    "archiver": "^2.1.1",
+    "async": "^2.6.1",
+    "cheerio": "^1.0.0-rc.2",
+    "lodash": "^4.17.10",
+    "request": "^2.87.0"
+  }
+}
