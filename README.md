@@ -113,6 +113,10 @@ This command also waits until Apostrophe is not busy, i.e. `.apos-global-busy` a
 
 `waitForNoModals()` will wait until no Apostrophe modals are active. It is appropriate when returning to the page context after working with modals in your tests.
 
+### categoryScreenshot
+
+`categoryScreenshot('article.png')` will take a screenshot and store it to `screenshots/latest/article.png`, relative to the current working directory. The word "latest" may be replaced by setting the environment variable VISUAL_CATEGORY. Creates missing folders if needed. Used by the `apostrophe-enterprise-testbed` project to set up `previous` with snapshots based on the latest npm releases, and `latest` with snapshots of the latest git masters.
+
 ## Standalone test steps
 
 The steps in the `steps/` folder cover standalone tasks like logging in or committing modified content. These can be included in a Nightwatch test scenario as shown above.
@@ -228,3 +232,7 @@ This step fetches the specified URL, without the session and cookies of the curr
 ## `server.js`
 
 `server.js` is a utility file that exports conveniences for creating an Apostrophe object that listens on the appropriate port, starting up Nightwatch with the chrome driver, and making sure that any previous Apostrophe objects bound to the same port are definitely gone before launching the next one for a new scenario. Its use is entirely optional. See the example above, as well as the [apostrophe-enterprise-testbed](https://github.com/apostrophecms/apostrophe-enterprise-testbed) project, for a good guide to its use.
+
+## Changelog
+
+2.0.2: introduced `categoryScreenshot` command.
