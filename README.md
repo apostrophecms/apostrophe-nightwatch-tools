@@ -38,6 +38,8 @@ const steps = require('apostrophe-nightwatch-tools/steps');
 module.exports = Object.assign(
   {
     before: (client, done) => {
+      console.log(process.argv);
+      console.log('IN START');
       client.resizeWindow(1200, 800);
       if (!this._server) {
         this._server = server.create('localhost', 3111);
@@ -45,7 +47,9 @@ module.exports = Object.assign(
       }
     },
     after: (client, done) => {
+      console.log('IN AFTER');
       client.end(() => {
+        console.log('STOPPING FROM AFTER');
         this._server.stop(done);
       });
     },
@@ -234,5 +238,7 @@ This step fetches the specified URL, without the session and cookies of the curr
 `server.js` is a utility file that exports conveniences for creating an Apostrophe object that listens on the appropriate port, starting up Nightwatch with the chrome driver, and making sure that any previous Apostrophe objects bound to the same port are definitely gone before launching the next one for a new scenario. Its use is entirely optional. See the example above, as well as the [apostrophe-enterprise-testbed](https://github.com/apostrophecms/apostrophe-enterprise-testbed) project, for a good guide to its use.
 
 ## Changelog
+
+2.0.3: added missing dependencies to `package.json`. Removed `node_modules` from git.
 
 2.0.2: introduced `categoryScreenshot` command.
