@@ -5,8 +5,8 @@ module.exports = (locale, doExport) => {
 
   return {
     [`[${counter}] switch locale to "${locale}"`]: function(client) {
-      const localeSwitcherBtnSelector = 'a[data-apos-admin-bar-item=apostrophe-workflow-locale-picker-modal]';
-      const requiredLocaleBtnSelector = `a[data-apos-locale=${locale}]`;
+      const localeSwitcherBtnSelector = '[data-apos-admin-bar-item=apostrophe-workflow-locale-picker-modal]';
+      const requiredLocaleBtnSelector = `[data-apos-locale=${locale}]`;
       client.waitForElementReady(localeSwitcherBtnSelector);
       client.clickWhenReady(localeSwitcherBtnSelector);
       client.waitForElementReady(requiredLocaleBtnSelector);
