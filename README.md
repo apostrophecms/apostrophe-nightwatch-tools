@@ -239,6 +239,8 @@ This step fetches the specified URL, without the session and cookies of the curr
 
 ## Changelog
 
+2.0.4: fixed issue where the `switchLocales` task failed since the introduction of `button` tags for the locale switcher in the context area. Chose to use the one in the admin bar, but launch it properly.
+
 2.0.3: added missing dependencies to `package.json`. Removed `node_modules` from git.
 
 2.0.2: introduced `categoryScreenshot` command.
