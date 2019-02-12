@@ -61,7 +61,7 @@ exports.create = (address, port, ver) => {
       }
     },
     // Run command line task. Not intended to sanitize sneaky input.
-    // Synchronous.
+    // Synchronous. Returns `{ code, stdout, stderr }`.
     task(args) {
       if (Array.isArray(args)) {
         args = args.join(' ');
@@ -74,7 +74,7 @@ exports.create = (address, port, ver) => {
         exe = 'app';
       }
       console.log('running task: ', args);
-      shell.exec(`node ${exe} ${args}`, {async: false});
+      return shell.exec(`node ${exe} ${args}`, {async: false});
     }
   };
 };
