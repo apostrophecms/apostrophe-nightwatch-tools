@@ -239,6 +239,8 @@ This step fetches the specified URL, without the session and cookies of the curr
 
 ## Changelog
 
+2.0.7: do not print unnecessary echo of server output.
+
 2.0.6: return result of synchronous `task` method.
 
 2.0.5: more race condition elimination relating to the admin bar.
