@@ -239,6 +239,8 @@ This step fetches the specified URL, without the session and cookies of the curr
 
 ## Changelog
 
+2.0.8: in the `createArticle.js` step, an additional task was added to make sure the "Basics" tab was focused on before creating an article title.
+
 2.0.7: do not print unnecessary echo of server output.
 
 2.0.6: return result of synchronous `task` method.
