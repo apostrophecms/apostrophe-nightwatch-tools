@@ -12,6 +12,7 @@ module.exports = (articleName) => {
       const blackoutSelector = '.apos-modal-blackout:first-child';
       const articleSelector = '[data-apos-admin-bar-item="apostrophe-blog"]';
       const addArticleBtnSelector = '[data-apos-create-apostrophe-blog]';
+      const basicsTabSelector = '[data-apos-open-group=basic]';
       const inputTitleSelector = '.apos-field-title input';
       const selectPublishedSelector = '.apos-field-published select';
       const inputPublicationDateSelector = '.apos-field-date input';
@@ -22,6 +23,7 @@ module.exports = (articleName) => {
 
       client.openAdminBarItem('apostrophe-blog');
       client.clickInModal('apostrophe-blog-manager-modal', addArticleBtnSelector);
+      client.clickInModal('apostrophe-blog-editor-modal', basicsTabSelector);
       client.resetValueInModal('apostrophe-blog-editor-modal', inputTitleSelector, articleName);
       client.clickInModal('apostrophe-blog-editor-modal', metaTabSelector);
       client.resetValueInModal('apostrophe-blog-editor-modal', selectPublishedSelector, 'Yes');
