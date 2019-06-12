@@ -239,6 +239,8 @@ This step fetches the specified URL, without the session and cookies of the curr
 
 ## Changelog
 
+2.0.9: the `addTextWidgetTo.js` step now more accurately targets the specific instance of CKEditor when setting the data. This is useful when you have multiple CKEditor rich text instances on a single page. 
+
 2.0.8: in the `createArticle.js` step, an additional task was added to make sure the "Basics" tab was focused on before creating an article title.
 
 2.0.7: do not print unnecessary echo of server output.
