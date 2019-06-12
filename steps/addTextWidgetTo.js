@@ -25,12 +25,16 @@ module.exports = ({selector, text} = {}) => {
       client.pause(200);
       client.clickWhenReady(richTextBtnSelector);
       client.pause(2000);
-      client.execute(function (content) {
-          const ckeditorInstance = _.find(CKEDITOR.instances);
+      client.execute(function (content, selector) {
+          // Pick out the CKEditor instance we actually
+          // care about, avoiding updating all of them
+          const id = $(selector).attr('id');
+          const chosenCkeditor = _.pick(CKEDITOR.instances, id);
+          const ckeditorInstance = _.find(chosenCkeditor);
 
           ckeditorInstance.setData(content);
         },
-        [text]
+        [text, richTextSelector]
       );
 
       client.expect.element(richTextSelector).text.to.contain(text);
