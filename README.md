@@ -239,7 +239,9 @@ This step fetches the specified URL, without the session and cookies of the curr
 
 ## Changelog
 
-2.0.10: `createArticle.js` step no longer focuses on the "Basics" tab when setting the publication date field value, as it now lives in the "Meta" group. 
+2.1.0: `changeWidgetPersona.js`: a new step added for changing the persona of a widget.
+
+2.0.10: `createArticle.js` step no longer focuses on the "Basics" tab when setting the publication date field value, as it now lives in the "Meta" group.
 
 2.0.9: the `addTextWidgetTo.js` step now more accurately targets the specific instance of CKEditor when setting the data. This is useful when you have multiple CKEditor rich text instances on a single page.
 

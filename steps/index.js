@@ -8,6 +8,7 @@ module.exports = {
   changePageTypeTo: require('./changePageTypeTo'),
   submitChanges: require('./submitChanges'),
   checkSubmitted: require('./checkSubmitted'),
+  changeWidgetPersona: require('./changeWidgetPersona'),
   confirm404ByRelativeUrl: require('./confirm404ByRelativeUrl'),
   confirm200ByRelativeUrl: require('./confirm200ByRelativeUrl'),
   navigateToRelativeUrl: require('./navigateToRelativeUrl'),
