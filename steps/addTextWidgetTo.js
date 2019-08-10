@@ -22,7 +22,7 @@ module.exports = ({selector, text} = {}) => {
       // TODO kill the pauses, probably by enhancing the
       // execute call below to wait for whatever is required
       // and then set an attribute we can wait on
-      client.pause(200);
+      client.pause(500);
       client.clickWhenReady(richTextBtnSelector);
       client.pause(2000);
       client.execute(function (content, selector) {
