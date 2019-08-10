@@ -25,7 +25,7 @@ exports.create = (address, port, ver) => {
 
 
 
-      server = shell.exec(`ADDRESS=${address} PORT=${port} node ${exe}`, {async: true,});
+      server = shell.exec(`DISMISS_NOTIFICATIONS=1 ADDRESS=${address} PORT=${port} node ${exe}`, {async: true,});
       onceCb = once(cb);
       var data = '';
       server.stdout.on('data', function(moreData) {

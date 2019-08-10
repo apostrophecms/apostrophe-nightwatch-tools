@@ -19,7 +19,6 @@ module.exports = {
   commit: require('./commit'),
   commitAndExport: require('./commitAndExport'),
   addTextWidgetTo: require('./addTextWidgetTo'),
-  checkNotification: require('./checkNotification'),
   createArticle: require('./createArticle'),
   makeIncognitoRequestByRelativeUrl: require('./makeIncognitoRequestByRelativeUrl'),
   openContextMenu: require('./openContextMenu'),

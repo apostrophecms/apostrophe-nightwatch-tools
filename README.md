@@ -239,6 +239,8 @@ This step fetches the specified URL, without the session and cookies of the curr
 
 ## Changelog
 
+3.0.0: Must be used with `nightwatch` 1.x, not 0.x. Tests pass more reliably.
+
 2.1.0: `changeWidgetPersona.js`: a new step added for changing the persona of a widget.
 
 2.0.10: `createArticle.js` step no longer focuses on the "Basics" tab when setting the publication date field value, as it now lives in the "Meta" group.

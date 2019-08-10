@@ -43,5 +43,5 @@ exports.command = function openAdminBarItem(name) {
         }
         setTimeout(dropdownAttempt, 50);
       }
-    }, [ name ]).waitForElementNotPresent('body[opening-admin-bar-item="1"]').clickWhenReady('.apos-admin-bar [data-apos-admin-bar-item="' + name + '"]');
+    }, [ name ]).waitForElementNotPresent('body[opening-admin-bar-item="1"]').pause(500).clickWhenReady('.apos-admin-bar [data-apos-admin-bar-item="' + name + '"]');
 };
