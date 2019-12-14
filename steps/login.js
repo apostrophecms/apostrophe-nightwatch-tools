@@ -12,6 +12,7 @@ module.exports = () => {
 
       client.clickWhenReady(loginBtnSelector);
       client.waitForElementReady(usernameInputSelector);
+      client.pause(250);
       client.setValue(usernameInputSelector, 'admin');
       client.setValue(passInputSelector, 'demo');
       client.clickWhenReady(submitBtnSelector);
