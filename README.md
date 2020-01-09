@@ -239,6 +239,8 @@ This step fetches the specified URL, without the session and cookies of the curr
 
 ## Changelog
 
+3.0.2: small pause in clickInModal to avoid unpredictable failures.
+
 3.0.1: small pause in login step to avoid unpredictable failures.
 
 3.0.0: Must be used with `nightwatch` 1.x, not 0.x. Tests pass more reliably.

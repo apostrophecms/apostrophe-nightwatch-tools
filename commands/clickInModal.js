@@ -14,5 +14,6 @@ exports.command = function clickInModal(modal, selector) {
   selector = '[data-apos-modal-current="' + modal + '"] ' + selector;
   return this
     .waitForElementReady(selector)
+    .pause(250)
     .click(selector);
 };
