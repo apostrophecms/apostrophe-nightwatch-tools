@@ -239,7 +239,7 @@ This step fetches the specified URL, without the session and cookies of the curr
 
 ## Changelog
 
-3.0.3: login step now expects to see draft-page, not live-page, because
+3.1.0: login step now expects to see draft-page, not live-page, because
 the latest version of apostrophe-workflow defaults to draft mode. Upgrade
 both modules.
 
