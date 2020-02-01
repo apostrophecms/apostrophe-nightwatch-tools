@@ -17,7 +17,7 @@ module.exports = () => {
       client.setValue(passInputSelector, 'demo');
       client.clickWhenReady(submitBtnSelector);
 
-      const loggedInPageSelector = 'body.apos-workflow-live-page';
+      const loggedInPageSelector = 'body.apos-workflow-draft-page';
 
       client.expect.element(loggedInPageSelector).to.be.present;
     }
