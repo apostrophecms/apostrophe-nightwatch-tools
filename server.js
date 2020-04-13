@@ -24,8 +24,13 @@ exports.create = (address, port, ver) => {
       }
 
 
-
-      server = shell.exec(`DISMISS_NOTIFICATIONS=1 ADDRESS=${address} PORT=${port} node ${exe}`, {async: true,});
+      // More dynamic set environment variable
+      shell.env["DISMISS_NOTIFICATIONS"] = 1;
+      shell.env["ADDRESS"] = address;
+      shell.env["PORT"] = port;
+      server = shell.exec(`node ${exe}`, {
+        async: true,
+      });
       onceCb = once(cb);
       var data = '';
       server.stdout.on('data', function(moreData) {
@@ -49,6 +54,10 @@ exports.create = (address, port, ver) => {
       try {
         if (process.platform.match(/darwin|bsd/)) {
           shell.exec(`lsof -i tcp:${port} | grep LISTEN | awk '{print $2}' | while IFS= read -r -d '' pid; do kill -9 "$pid"; done`);
+        } else if (process.platform.match(/win32/)){
+          // Source help: https://stackoverflow.com/a/6204329/9716958
+          // Execution command line for Windows platform to kill all processes including child processes on current port number.
+          shell.exec(`FOR /F "tokens=5 delims= " %P IN ('netstat -a -n -o ^| grep LISTEN ^| findstr :${port}') DO TaskKill.exe /F /T /PID %P`);
         } else {
           shell.exec(`lsof -i tcp:${port} | grep LISTEN | awk '{print $2}' | xargs -r kill -9`);
         }
