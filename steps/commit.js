@@ -5,6 +5,8 @@ module.exports = (itemsCount = 1) => {
 
   return {
     [`[${counter}] commit all changes`]: function(client) {
+      // Allow page to save asynchronously first
+      client.pause(250);
       const commitBtnSelector = '[data-apos-workflow-commit]';
       const skipExportBtnSelector = '.apos-workflow-export-modal [data-apos-cancel]';
       const modalDialogSelector = '.apos-workflow-commit-modal';
