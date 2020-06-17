@@ -10,6 +10,8 @@ module.exports = () => {
 
       client.clickWhenReady(submitBtnSelector);
       client.waitForElementReady(submittedLabelSelector);
+      // Allow page to save asynchronously first
+      client.pause(250);
     }
   };
 };
