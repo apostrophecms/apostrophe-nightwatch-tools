@@ -21,7 +21,7 @@ npm install --dev apostrophe-nightwatch-tools
 Now, in your `nightwatch.js` configuration file, set `custom_commands_path` to an array containing the `commands` folder of this module, plus any custom command folders of your own:
 
 ```javascript
-  custom_commands_path: [   
+  custom_commands_path: [
     "node_modules/apostrophe-nightwatch-tools/commands",
     "tests/commands"
   ],
@@ -239,10 +239,9 @@ This step fetches the specified URL, without the session and cookies of the curr
 
 ## Changelog
 
-3.3.0:
+3.3.0 - 2020-06-17:
 
 - pause when committing and submitting, to allow asynchronous page content save operations to complete. Increases test stability.
-
 - `steps.login` can now be called with a username and password. Otherwise it still defaults to `admin` and `demo`.
 
 3.2.0: Windows-compatible. Thanks to Amin Shazrin.
