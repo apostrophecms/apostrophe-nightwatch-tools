@@ -10,6 +10,9 @@ module.exports = (itemsCount = 1) => {
       const exportBtnSelector = '[data-apos-save]';
       const masterLocaleBtnSelector = '[for*=master] span';
 
+      // Allow page to save asynchronously first
+      client.pause(250);
+
       client.waitForElementReady(commitBtnSelector);
       client.clickWhenReady(commitBtnSelector);
 
