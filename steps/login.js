@@ -1,6 +1,6 @@
 let counter = 0;
 
-module.exports = () => {
+module.exports = (username = 'admin', password = 'demo') => {
   counter++;
 
   return {
@@ -13,8 +13,8 @@ module.exports = () => {
       client.clickWhenReady(loginBtnSelector);
       client.waitForElementReady(usernameInputSelector);
       client.pause(250);
-      client.setValue(usernameInputSelector, 'admin');
-      client.setValue(passInputSelector, 'demo');
+      client.setValue(usernameInputSelector, username);
+      client.setValue(passInputSelector, password);
       client.clickWhenReady(submitBtnSelector);
 
       const loggedInPageSelector = 'body.apos-workflow-draft-page';
