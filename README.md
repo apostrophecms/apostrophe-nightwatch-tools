@@ -239,7 +239,7 @@ This step fetches the specified URL, without the session and cookies of the curr
 
 ## Changelog
 
-3.3.2 - 2020-07-01:
+3.3.2 - 2020-07-15:
 - pause for asynchronous save operation before submitting, not after. 
 
 3.3.1 - 2020-06-17:
