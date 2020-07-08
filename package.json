@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-nightwatch-tools",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "description": "Nightwatch custom commands useful for testing ApostropheCMS sites.",
   "main": "index.js",
   "scripts": {

@@ -238,6 +238,10 @@ This step fetches the specified URL, without the session and cookies of the curr
 `server.js` is a utility file that exports conveniences for creating an Apostrophe object that listens on the appropriate port, starting up Nightwatch with the chrome driver, and making sure that any previous Apostrophe objects bound to the same port are definitely gone before launching the next one for a new scenario. Its use is entirely optional. See the example above, as well as the [apostrophe-enterprise-testbed](https://github.com/apostrophecms/apostrophe-enterprise-testbed) project, for a good guide to its use.
 
 ## Changelog
+
+3.3.2 - 2020-07-01:
+- pause for asynchronous save operation before submitting, not after. 
+
 3.3.1 - 2020-06-17:
 - pause when committing and exporting, to allow asynchronous page content save operations to complete. Increases test stability.
 
