@@ -88,7 +88,7 @@ exports.create = (address, port, ver) => {
 };
 
 function restoreMongoDump() {
-  const cmd = 'mongorestore --noIndexRestore mongodump/ --drop';
+  const cmd = 'mongorestore --uri=${APOS_MONGODB_URI:-mongodb://localhost:27017} --noIndexRestore mongodump/ --drop';
   const execRes = shell.exec(cmd, {silent: true});
 
   if (execRes.code !== 0) {
