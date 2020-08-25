@@ -239,6 +239,9 @@ This step fetches the specified URL, without the session and cookies of the curr
 
 ## Changelog
 
+3.3.3 - 2020-08-26:
+- Respect the APOS_MONGODB_URI environment variable with respect to establishing a connection, so tests can be run with an external database.
+
 3.3.2 - 2020-07-15:
 - pause for asynchronous save operation before submitting, not after. 
 
